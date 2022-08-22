@@ -25,6 +25,6 @@ Câu lệnh tạo `hive table` từ `hdfs` để truy vấn với `superset`
 
     create external table spotify_final (title STRING, rank STRING, date STRING, artist STRING, url STRING ,region STRING, chart STRING , trend STRING, streams STRING ) STORED AS PARQUET LOCATION 'hdfs://172.17.80.21:9000/user/tiencm8/btl/output';
 
-Trên server `172.17.80.21` (master) user `hadoop` folder `/home/hadoop/anhlq36/btl` câu lệnh spark-submit:
+Trên server `172.17.80.21` (master) user `hadoop` folder `/home/hadoop/tiencm8/final` câu lệnh spark-submit:
 
     spark-submit --deploy-mode client --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0 --class Spark.streaming ETL_pipeline_spotify-1.0-SNAPSHOT.jar
