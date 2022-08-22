@@ -8,7 +8,8 @@
 # dữ liệu :
 ![image](https://user-images.githubusercontent.com/88629792/185884758-cf2666dd-535f-4bd0-9478-970525665723.png)
 
-![Uploading image.png…]()
+![data1](https://user-images.githubusercontent.com/88629792/185885507-01716225-5e9c-4ff7-9155-128524071340.png)
+
 
 Câu lệnh start Spark Thrift Server trên server `172.17.80.21` tại `queue 1`
 
