@@ -49,7 +49,7 @@ def my_producer():
 
 
 dag = DAG('Kafka_spotify_test', description='spotiy data to kafka test',
-          schedule_interval='*/2 * * * *',
+          schedule_interval='*/1 * * * *',
           start_date=datetime(2022, 8, 20), catchup=False)
 
 Kafka_Producer = PythonOperator(

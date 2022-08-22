@@ -37,7 +37,8 @@ public class streaming {
                 .readStream()
                 .format("kafka")
                 .option("kafka.bootstrap.servers", "172.17.80.28:9092")
-                .option("subscribe", "spotify_tiencm8")
+                .option("subscribe", "spotify_tiencm8_1")
+                .option("group.id","group_tiencm8")
                 .option("startingOffsets","earliest")
                 .option("auto.offset.reset","true")
                 .option("failOnDataLoss", "false")
@@ -71,7 +72,8 @@ public class streaming {
                 //hdfs://172.17.80.21:9000/user/tiencm8/final/checkpoint
                 //hdfs://172.17.80.21:9000/user/tiencm8/final/output
                 .start();
-        query.awaitTermination();
+        query.awaitTermination(50000);
+        spark.stop();
 
     }
 }
